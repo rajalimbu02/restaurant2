@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - Taplejung Sekuwa House</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="logo">
+            <h1>🍖 Taplejung Sekuwa House</h1>
+            <p>Staff Login</p>
+        </div>
+
+        <div class="default-creds">
+            <strong>Default Login:</strong><br>
+            Email: admin@taplejung.com<br>
+            Password: admin123<br>
+            <small>⚠️ Change password after first login!</small>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div class="back-link">
+            <a href="/public/index.html">← Back to Public Website</a>
+        </div>
+    </div>
+
+    <script src="staff.js"></script>
+</body>
+</html>

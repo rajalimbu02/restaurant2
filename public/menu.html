@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Taplejung Sekuwa House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images.png" alt="Taplejung Sekuwa House Logo">
+                <h1>Taplejung Sekuwa House</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <button class="call-button-nav" onclick="handleCallClick('9895325478')">
+                        📞 Call
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="menu-page">
+        <!-- Menu items will be loaded dynamically from the database -->
+        <p style="text-align: center; padding: 2rem; color: #666;">Loading menu...</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taplejung Sekuwa House. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu-loader.js"></script>
+</body>
+</html>

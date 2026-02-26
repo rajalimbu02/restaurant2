@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Taplejung Sekuwa House</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <nav class="staff-nav">
+        <div class="nav-brand">
+            <h2>🍖 Taplejung Sekuwa House</h2>
+            <span class="staff-badge">Staff Panel</span>
+        </div>
+        <div class="nav-user">
+            <a href="dashboard.html" style="color: white; text-decoration: none; margin-right: 1rem;">← Dashboard</a>
+            <span id="userName">Loading...</span>
+            <span id="userRole" class="role-badge"></span>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="settings-container">
+        <h1 style="color: #8B0000; margin-bottom: 2rem;">Settings</h1>
+
+        <!-- Change Password Section -->
+        <div class="settings-section">
+            <h2>Change Password</h2>
+            <div id="password-message" class="message"></div>
+            
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="newPassword">New Password (min 6 characters)</label>
+                    <input type="password" id="newPassword" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" minlength="6" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Change Password</button>
+            </form>
+        </div>
+
+        <!-- Add Staff Section (Manager Only) -->
+        <div class="settings-section manager-only" id="addStaffSection">
+            <h2>Add Staff User</h2>
+            <div id="staff-message" class="message"></div>
+            
+            <form id="addStaffForm">
+                <div class="form-group">
+                    <label for="staffName">Name</label>
+                    <input type="text" id="staffName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="staffEmail">Email</label>
+                    <input type="email" id="staffEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="staffPassword">Password (min 6 characters)</label>
+                    <input type="password" id="staffPassword" minlength="6" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="staffRole">Role</label>
+                    <select id="staffRole" required>
+                        <option value="clerk">Clerk</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary">Add Staff User</button>
+            </form>
+        </div>
+
+        <!-- Manage Staff Section (Manager Only) -->
+        <div class="settings-section manager-only" id="manageStaffSection">
+            <h2>Manage Staff</h2>
+            <div id="users-list" class="user-list">
+                <p style="text-align: center; color: #666;">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="staff.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - Taplejung Sekuwa House</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <nav class="staff-nav">
+        <div class="nav-brand">
+            <h2>🍖 Taplejung Sekuwa House</h2>
+            <span class="staff-badge">Staff Panel</span>
+        </div>
+        <div class="nav-user">
+            <span id="userName">Loading...</span>
+            <span id="userRole" class="role-badge"></span>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="menu-list">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="menu-management.html">Menu Management</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="/public/menu.html" target="_blank">View Public Menu</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h1>Dashboard</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Menu Items</h3>
+                    <p class="stat-number" id="totalItems">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Categories</h3>
+                    <p class="stat-number" id="totalCategories">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Your Role</h3>
+                    <p class="stat-number" id="dashboardRole">-</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <a href="menu-management.html" class="action-btn">Manage Menu</a>
+                    <a href="settings.html" class="action-btn">Settings</a>
+                    <a href="/public/menu.html" target="_blank" class="action-btn secondary">View Public Site</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="staff.js"></script>
+</body>
+</html>
